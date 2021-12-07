@@ -1,0 +1,37 @@
+<html>
+  <head>
+  </head>
+  <style>
+    #root {
+      max-width: 700px;
+      margin: 0 auto;
+      height: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+    }
+
+    input {
+      padding: 200px 0;
+      -webkit-appearance: none;
+    }
+
+    label, input, button {
+      font-size: 3em;
+      font-family: Helvetica, sans-serif;
+    }
+  </style>
+  <body>
+    <div id='root'>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="creature">Upload your creature:</label>
+        <input type="file" id="creature" capture="environment" accept="image/*" name="photo">
+        <input type="submit" value="Send Creature">
+      </form>
+    </div>
+  </body>
+</html>
