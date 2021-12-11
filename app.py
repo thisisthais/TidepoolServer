@@ -64,7 +64,7 @@ def upload():
     width, height = processed_image.size
     newWidth, newHeight = int(width/5), int(height/5)
     processed_image = processed_image.resize((newWidth, newHeight))
-    processed_image.save(f'../openFrameworks/apps/myApps/Tidepool/bin/data/images/test{numImages}.png');
+    processed_image.save(f'../openFrameworks_11.2/apps/myApps/Tidepool/bin/data/images/test{numImages}.png');
     numImages += 1
     return('Image uploaded')
     print('Image uploaded')
