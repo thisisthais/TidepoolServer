@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from PIL import Image
 from PIL import ImageCms
 import cv2
+import random
 import numpy as np
 
 app = Flask(__name__)
@@ -64,7 +65,8 @@ def upload():
     width, height = processed_image.size
     newWidth, newHeight = int(width/5), int(height/5)
     processed_image = processed_image.resize((newWidth, newHeight))
-    processed_image.save(f'../openFrameworks_11.2/apps/myApps/Tidepool/bin/data/images/test{numImages}.png');
+    img_num = random.randrange(0, 10000)
+    processed_image.save(f'../openFrameworks_11.2/apps/myApps/Tidepool/bin/data/images/test{img_num}.png');
     numImages += 1
     return('Image uploaded')
     print('Image uploaded')
